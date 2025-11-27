@@ -2111,8 +2111,7 @@ class HookedTransformer(HookedRootModule):
                     return_type = "tensor"
 
             assert isinstance(tokens, torch.Tensor)
-            print(tokens.shape) # DEBUG
-            batch_size, ctx_length = tokens.shape
+            batch_size, ctx_length = tokens.shape[0], tokens.shape[1]
             device = devices.get_device_for_block_index(0, self.cfg)
             tokens = tokens.to(device)
             if use_past_kv_cache:
