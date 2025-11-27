@@ -537,6 +537,7 @@ class HookedTransformer(HookedRootModule):
         with utils.LocallyOverridenDefaults(
             self, prepend_bos=prepend_bos, padding_side=padding_side
         ):
+            start_at_layer = 0 # DEBUG
             if start_at_layer is None:
                 (
                     residual,
