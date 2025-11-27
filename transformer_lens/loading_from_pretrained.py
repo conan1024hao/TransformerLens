@@ -881,7 +881,7 @@ def convert_hf_model_config(model_name: str, **kwargs):
             "n_layers": 32,
             "n_ctx": 8192,
             "eps": 1e-5,
-            "d_vocab": 128256,
+            "d_vocab": 128320,
             "act_fn": "silu",
             "n_key_value_heads": 8,
             "normalization_type": "RMS",
